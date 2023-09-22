@@ -98,7 +98,8 @@ const ProFormListContainer: React.FC<ProFormListItemProps> = (props) => {
   ]);
 
   const creatorButton = useMemo(() => {
-    if (creatorButtonProps === false || uuidFields.length === max) return null;
+    console.log('修改源码 :>> ', uuidFields.length , max);
+    if (creatorButtonProps === false || uuidFields.length >= max) return null;
     const {
       position = 'bottom',
       creatorButtonText = intl.getMessage(
